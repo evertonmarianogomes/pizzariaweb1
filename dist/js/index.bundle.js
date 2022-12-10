@@ -690,6 +690,17 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
+/***/ "./src/ts/DarkMode.util.ts":
+/*!*********************************!*\
+  !*** ./src/ts/DarkMode.util.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nclass DarkModeSwitch {\r\n    darkSwitch;\r\n    constructor() {\r\n        this.darkSwitch = document.querySelector(\"#darkSwitch\");\r\n        if (this.darkSwitch) {\r\n            this.initTheme();\r\n            this.resetTheme();\r\n        }\r\n    }\r\n    static getInstance() {\r\n        return new DarkModeSwitch();\r\n    }\r\n    initTheme() {\r\n        var darkThemeSelected = localStorage.getItem(\"darkSwitch\") !== null &&\r\n            localStorage.getItem(\"darkSwitch\") === \"dark\";\r\n        this.darkSwitch.checked = darkThemeSelected;\r\n        darkThemeSelected\r\n            ? document.body.setAttribute(\"data-theme\", \"dark\")\r\n            : document.body.removeAttribute(\"data-theme\");\r\n        (() => {\r\n            let navbar = document.querySelector(\"nav.navbar\");\r\n            if (this.darkSwitch?.checked) {\r\n                navbar?.classList.add(\"navbar-dark\");\r\n            }\r\n            else {\r\n                navbar?.classList.remove(\"navbar-dark\");\r\n            }\r\n        })();\r\n    }\r\n    resetTheme() {\r\n        this.darkSwitch.addEventListener(\"change\", function () {\r\n            (() => {\r\n                let navbar = document.querySelector(\"nav.navbar\");\r\n                if (this.checked) {\r\n                    document.body.setAttribute(\"data-theme\", \"dark\");\r\n                    localStorage.setItem(\"darkSwitch\", \"dark\");\r\n                    navbar?.classList.add(\"navbar-dark\");\r\n                }\r\n                else {\r\n                    document.body.removeAttribute(\"data-theme\");\r\n                    localStorage.removeItem(\"darkSwitch\");\r\n                    navbar?.classList.remove(\"navbar-dark\");\r\n                }\r\n            })();\r\n        });\r\n    }\r\n}\r\nexports[\"default\"] = DarkModeSwitch;\r\n\n\n//# sourceURL=webpack://web2_pizzariaweb1/./src/ts/DarkMode.util.ts?");
+
+/***/ }),
+
 /***/ "./src/ts/index.ts":
 /*!*************************!*\
   !*** ./src/ts/index.ts ***!
@@ -697,7 +708,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\r\nconst jquery_1 = __importDefault(__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"));\r\nconst CommonFunctions = {\r\n    toggleLoader: () => {\r\n        setTimeout(() => {\r\n            (0, jquery_1.default)(\"#loader_container\").fadeToggle();\r\n        }, 1200);\r\n    }\r\n};\r\nwindow.addEventListener(\"load\", () => {\r\n    let message = \"HelloWorld\";\r\n    Object.values(CommonFunctions).map(value => value());\r\n});\r\n\n\n//# sourceURL=webpack://web2_pizzariaweb1/./src/ts/index.ts?");
+eval("\r\nvar __importDefault = (this && this.__importDefault) || function (mod) {\r\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\r\n};\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.esm.js\");\r\nconst jquery_1 = __importDefault(__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"));\r\nconst DarkMode_util_1 = __importDefault(__webpack_require__(/*! ./DarkMode.util */ \"./src/ts/DarkMode.util.ts\"));\r\nconst CommonFunctions = {\r\n    toggleLoader: () => {\r\n        setTimeout(() => {\r\n            (0, jquery_1.default)(\"#loader_container\").fadeToggle();\r\n        }, 1200);\r\n    },\r\n    toggleDarkMode: () => { DarkMode_util_1.default.getInstance(); }\r\n};\r\nwindow.addEventListener(\"load\", () => {\r\n    let message = \"HelloWorld\";\r\n    Object.values(CommonFunctions).map(value => value());\r\n});\r\n\n\n//# sourceURL=webpack://web2_pizzariaweb1/./src/ts/index.ts?");
 
 /***/ })
 

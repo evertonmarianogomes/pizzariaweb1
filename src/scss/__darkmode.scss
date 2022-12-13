@@ -55,3 +55,14 @@
   [data-theme="dark"] .modal-header > .btn-close{
     filter: invert(1) !important;
   }
+
+
+  [data-theme="dark"] .text-black-50 {
+    color: #fff !important;
+  }
+
+
+  [data-theme="dark"] .carousel-control-prev > span, 
+  [data-theme="dark"] .carousel-control-next > span {
+    filter: invert(0) !important;
+  } 

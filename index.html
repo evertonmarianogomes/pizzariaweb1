@@ -1,82 +1,227 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Pizzaria Web 1</title>
-    <!-- Stylesheet with Bootstrap -->
-    <link rel="stylesheet" href="./dist/css/style.css">
-    <link rel="shortcut icon" href="./favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Pizzaria Web 1</title>
+  <!-- Stylesheet with Bootstrap -->
+  <link rel="stylesheet" href="./dist/css/style.css">
+  <link rel="shortcut icon" href="./favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
-    <!-- Loader Container -->
-    <div id="loader_container">
-        <div id="loader_header" class="row">
-            <h4><i class="fas fa-pizza-slice"></i> Pizzaria Web 1 Alpha 1</small></h4>
-            <p class="pt-3">Carregando dados, aguarde...</p>
-            <p>For testing purposes only. Version 1.00.1001-alpha1</p>
-        </div>
-        <div class="wrapper">
-            <div class="loader"><div class="dot"></div></div>
-            <div class="loader"><div class="dot"></div></div>
-            <div class="loader"><div class="dot"></div></div>
-            <div class="loader"><div class="dot"></div></div>
-            <div class="loader"><div class="dot"></div></div>
-            <div class="loader"><div class="dot"></div></div>
-        </div>
+  <!-- Loader Container -->
+  <div id="loader_container">
+    <div id="loader_header" class="row">
+      <h4><i class="fas fa-pizza-slice"></i> Pizzaria Web 1 Alpha 2</small></h4>
+      <p class="pt-3">Carregando dados, aguarde...</p>
+      <p>For testing purposes only. Version 1.00.1200-alpha2</p>
     </div>
+    <div class="wrapper">
+      <div class="loader">
+        <div class="dot"></div>
+      </div>
+      <div class="loader">
+        <div class="dot"></div>
+      </div>
+      <div class="loader">
+        <div class="dot"></div>
+      </div>
+      <div class="loader">
+        <div class="dot"></div>
+      </div>
+      <div class="loader">
+        <div class="dot"></div>
+      </div>
+      <div class="loader">
+        <div class="dot"></div>
+      </div>
+    </div>
+  </div>
 
-    <!-- End Loader Container -->
+  <!-- End Loader Container -->
 
-    <!-- Start Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="./index.html"><i class="fas fa-pizza-slice"></i> Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!-- Start Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html"><i class="fas fa-pizza-slice"></i> Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre</a>
-              </li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">Sobre</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle"></i> Login
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Disponível em Pizzaria Web 2</a></li>
             </ul>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fas fa-user-circle"></i> Login
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Disponível em Pizzaria Web 2</a></li>
-                    </ul>
-                </li>
-                <li class="nav-link">
-                  <div class="form-check form-switch">
-                    <input type="checkbox" class="form-check-input" id="darkSwitch" />
-                    <label class="custom-control-label" for="darkSwitch">Modo Escuro</label>
-                  </div>
-                </li>
-            </ul>
+          </li>
+          <li class="nav-link">
+            <div class="form-check form-switch">
+              <input type="checkbox" class="form-check-input" id="darkSwitch" />
+              <label class="custom-control-label" for="darkSwitch">Modo Escuro</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <div class="container pt-3">
+    <h2>Bem vindo a Pizzaria Web 1</h2>
+    <p>Aproveite as nossas ofertas!!</p>
+    <hr>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/pizza_calabresa.jpg" class="d-block carousel-image" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Pizzas salgadas</h5>
           </div>
         </div>
-      </nav>
-    <!-- End Navbar -->
-
-    <div class="container pt-3">
-        <h2>HelloWorld</h2>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit enim, ad perspiciatis repudiandae vero ea. Itaque unde rerum obcaecati dolorem?</p>
+        <div class="carousel-item">
+          <img src="./img/pizza_chocolate.jpg" class="d-block carousel-image" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Pizzas doces</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/pepsi_black.png" class="d-block carousel-image" id="carousel-pepsi">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Refrigerantes</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
-    <code class="ms-5 text-center">
-        <p>&copy; Pizzaria Web 1 Alpha 1</p>
-        <p>For testing purposes only. Version 1.00.1001-alpha1</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+      <h4>Pizzas Salgadas</h4>
+      <hr class="w-100 ">
+
+      <div class="card shadow-sm col-12 col-mg-6 col-lg-4 col-xg-6" data-aos="fade-up">
+        <img src="./img/pizza_calabresa.jpg" class="card-img-top img-pizza">
+        <div class="card-body">
+          <h3>Pizza de Calabresa</h3>
+          <p>Ingredientes: Pizza de Calabresa com Calabresa</p>
+
+          <button class="btn btn-success">Comprar</button>
+        </div>
+      </div>
+
+
+      <div class="card shadow-sm col-12 col-mg-6 col-lg-4 col-xg-6" data-aos="fade-up">
+        <img src="./img/pizza_mussarela.jpg" class="card-img-top img-pizza">
+        <div class="card-body">
+          <h3>Pizza de Mussarela</h3>
+          <p>Ingredientes: Pizza de Mussarela</p>
+
+          <button class="btn btn-success">Comprar</button>
+        </div>
+      </div>
+
+
+      <div class="card shadow-sm col-12 col-mg-6 col-lg-4 col-xg-6" data-aos="fade-up">
+        <img src="./img/pizza_bacon.jpg" class="card-img-top img-pizza">
+        <div class="card-body">
+          <h3>Pizza de Bacon</h3>
+          <p>Ingredientes: Bacon</p>
+
+          <button class="btn btn-success">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h3>Pizzas Doces</h3>
+      <hr>
+
+      <div class="card shadow-sm col-12 col-mg-6 col-lg-4 col-xg-6" data-aos="fade-up">
+        <img src="./img/pizza_chocolate.jpg" class="card-img-top img-pizza">
+        <div class="card-body">
+          <h3>Pizza de Chocolate</h3>
+          <p>Ingredientes: Chocolate</p>
+
+          <button class="btn btn-success">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <section class="mt-4 d-flex flex-wrap justify-content-center" data-aos="fade-up">
+    <h3 class="w-100" style="margin-left: 6rem;">Deseja receber as ofertas em seu e-mail?</h3>
+
+    <div class="col-10 col-mg-6 col-lg-6">
+      <form action="#" method="post" id="formNews">
+      <div class="mb-2">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" name="emailName" id="email" class="form-control" required placeholder="Insira o seu melhor e-mail">
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+    </div>
+    
+  </section>
+  <code class="ms-5 text-center">
+        <p>&copy; Pizzaria Web 1 Alpha 2</p>
+        <p>For testing purposes only. Version 1.00.1200-alpha2</p>
     </code>
-    <!-- JS with Bootstrap -->
-    <script src="./dist/js/index.bundle.js"></script>
+
+
+  <!-- About Modal -->
+  <div class="modal modal-lg fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-circle-info"></i> Sobre</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center text-center">
+            <h3 class="text-black-50 mx-2"><i class="fa-solid fa-pizza-slice"></i> Pizzaria Web 1 Alpha 2</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End About Modal -->
+  <!-- JS with Bootstrap -->
+  <script src="./dist/js/index.bundle.js"></script>
 </body>
+
 </html>

@@ -1,3 +1,60 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./_loader.scss";
 @import "./_darkmode.scss";
+@import "../../node_modules/aos/src/sass/aos.scss";
+
+.modal {
+    backdrop-filter: blur(12px);
+}
+
+.img-pizza {
+    height: 15rem;
+}
+
+.carousel-image {
+    width: 50%;
+    margin: auto;
+    height: 25rem;
+}
+
+#carousel-pepsi {
+    width: 20% !important;
+}
+
+.carousel-control-prev > span, .carousel-control-next > span {
+    filter: invert(1);
+}
+
+
+.carousel-caption {
+    backdrop-filter: blur(3px);
+}
+
+
+@media only screen and (max-width: 992px) {
+    .card > img {
+        height: 25rem !important;
+    }
+
+
+    
+    .carousel-image {
+        width: 80% ;
+    }
+
+    #carousel-pepsi {
+        width: 50% !important;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .carousel-image {
+        width: 95% ;
+    }
+
+    #carousel-pepsi {
+        width: 50% !important;
+    }
+}

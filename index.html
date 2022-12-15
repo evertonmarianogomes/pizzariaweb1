@@ -19,9 +19,9 @@
   <!-- Loader Container -->
   <div id="loader_container">
     <div id="loader_header" class="row">
-      <h4><i class="fas fa-pizza-slice"></i> Pizzaria Web 1 Alpha 2</small></h4>
+      <h4><i class="fas fa-pizza-slice"></i> Pizzaria Web 1</small></h4>
       <p class="pt-3">Carregando dados, aguarde...</p>
-      <p>For testing purposes only. Version 1.00.1200-alpha2</p>
+      <p>For testing purposes only. Version 1.00.1351-rc1</p>
     </div>
     <div class="wrapper">
       <div class="loader">
@@ -83,7 +83,7 @@
   </nav>
   <!-- End Navbar -->
 
-  <div class="container pt-3">
+  <main class="container pt-3">
     <h2>Bem vindo a Pizzaria Web 1</h2>
     <p>Aproveite as nossas ofertas!!</p>
     <hr>
@@ -128,6 +128,11 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
+    <section class="help mt-4">
+      <p>Dúvidas sobre o tamanho das pizzas?</p>
+      <button class="btn btn-primary" id="btnShowPizzaSizeModal">Clique aqui</button>
+    </section>
 
     <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
       <h4>Pizzas Salgadas</h4>
@@ -181,25 +186,26 @@
       </div>
     </div>
     <hr>
-  </div>
-  <section class="mt-4 d-flex flex-wrap justify-content-center" data-aos="fade-up">
-    <h3 class="w-100" style="margin-left: 6rem;">Deseja receber as ofertas em seu e-mail?</h3>
-
-    <div class="col-10 col-mg-6 col-lg-6">
-      <form action="#" method="post" id="formNews">
-      <div class="mb-2">
-        <label for="email" class="form-label">E-mail</label>
-        <input type="email" name="emailName" id="email" class="form-control" required placeholder="Insira o seu melhor e-mail">
-      </div>
-
-      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-    </form>
     </div>
-    
+    <section class="mt-4 d-flex flex-wrap justify-content-center" data-aos="fade-up">
+      <h3 class="w-100" style="margin-left: 6rem;">Deseja receber as ofertas em seu e-mail?</h3>
+
+      <div class="col-10 col-mg-6 col-lg-6">
+        <form action="#" method="post" id="formNews">
+          <div class="mb-2">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" name="emailName" id="email" class="form-control" required
+              placeholder="Insira o seu melhor e-mail">
+          </div>
+
+          <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+  </main>
+
   </section>
   <code class="ms-5 text-center">
-        <p>&copy; Pizzaria Web 1 Alpha 2</p>
-        <p>For testing purposes only. Version 1.00.1200-alpha2</p>
+        <p>&copy; Pizzaria Web 1</p>
+        <p>For testing purposes only. Version 1.00.1351-rc1</p>
     </code>
 
 
@@ -212,14 +218,79 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="row justify-content-center text-center">
-            <h3 class="text-black-50 mx-2"><i class="fa-solid fa-pizza-slice"></i> Pizzaria Web 1 Alpha 2</h3>
-          </div>
+
+          <h3 class="text-black-50 text-center" style="margin-bottom: 2rem;"><i class="fa-solid fa-pizza-slice"></i> Pizzaria Web 1 RC1</h3>
+
+          <p class="text-justify">'Pizzaria Web 1' é um trabalho desenvolvido para a disciplina de Construção de Páginas
+            Web 1 como forma de avaliação e requisito para aprovação. Curso Superior em Sistemas para Internet do
+            Instituto Federal de Mato Grosso do Sul - Campus Campo Grande</p>
+
+
+            <p>Pizzaria Web 1 RC1 - Versão 1.00.1351-rc1</p>
+            <p>Tecnologias utilizadas</p>
+            <ul>
+              <li><a href="https://getbootstrap.com/" target="_blank">Bootstrap Framework</a></li>
+              <li><a href="https://fontawesome.com/icons" target="_blank">Font Awesome Icons</a></li>
+              <li><a href="https://www.typescriptlang.org/pt/ " target="_blank">TypeScript</a></li>
+              <li><a href="https://jquery.com/" target="_blank">jQuery Library</a></li>
+              <li><a href="https://michalsnik.github.io/aos/" target="_blank">AOS - Animate on Scroll</a></li>
+            </ul>
+
         </div>
       </div>
     </div>
   </div>
   <!-- End About Modal -->
+
+  <!-- Pizza Size Modal -->
+  <div class="modal modal-lg fade" id="pizzaSizeModal" tabindex="-1" aria-labelledby="aboutModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-circle-info"></i> Ajuda</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Na tabela abaixo, tem um comparativo dos tamanhos das Pizzas disponíveis</p>
+
+          <div class="table-responsive ms-3">
+            <table class="table table-hover table-dark table-striped">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Tamanho (em CM)</th>
+                  <th>Adicional de preço</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Pizza Média</td>
+                  <td>30cm</td>
+                  <td>R$1,50</td>
+                </tr>
+
+
+                <tr>
+                  <td>Pizza Grande</td>
+                  <td>45cm</td>
+                  <td>R$3,00</td>
+                </tr>
+
+
+                <tr>
+                  <td>Pizza Gigante</td>
+                  <td>60cm</td>
+                  <td>R$6,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Pizza Size Modal -->
   <!-- JS with Bootstrap -->
   <script src="./dist/js/index.bundle.js"></script>
 </body>

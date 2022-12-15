@@ -25,6 +25,10 @@
     background-color: #000 !important;
   }
 
+  [data-theme="dark"] .navbar {
+    background-color: transparent !important;
+  }
+
   [data-theme="dark"] .card {
     background-color: #000 !important;
     color: white !important;
@@ -63,6 +67,7 @@
 
 
   [data-theme="dark"] .carousel-control-prev > span, 
-  [data-theme="dark"] .carousel-control-next > span {
+  [data-theme="dark"] .carousel-control-next > span,
+  [data-theme="dark"] .carousel-indicators {
     filter: invert(0) !important;
   } 

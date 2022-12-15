@@ -18,10 +18,10 @@
 }
 
 #carousel-pepsi {
-    width: 20% !important;
+    width: 15rem !important;
 }
 
-.carousel-control-prev > span, .carousel-control-next > span {
+.carousel-control-prev > span, .carousel-control-next > span, .carousel-indicators {
     filter: invert(1);
 }
 
@@ -30,31 +30,37 @@
     backdrop-filter: blur(3px);
 }
 
+@media only screen and (min-width: 992px) {
+    nav.navbar {
+        position: fixed;
+        backdrop-filter: blur(15px);
+        width: 100%;
+        z-index: 10;
+    }
+
+    #carouselExampleCaptions {
+        height: calc(100vh - 12rem);
+    }
+
+    main.container {
+        padding-top: 4rem !important;
+    }
+}
 
 @media only screen and (max-width: 992px) {
     .card > img {
         height: 25rem !important;
     }
 
-
-    
     .carousel-image {
         width: 80% ;
     }
 
-    #carousel-pepsi {
-        width: 50% !important;
-    }
 }
-
 
 
 @media only screen and (max-width: 600px) {
     .carousel-image {
         width: 95% ;
-    }
-
-    #carousel-pepsi {
-        width: 50% !important;
-    }
+    } 
 }
